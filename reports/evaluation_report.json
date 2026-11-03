@@ -1,0 +1,23 @@
+{
+  "base_metrics": {
+    "total_samples": 10,
+    "exact_match_rate": 0.0,
+    "schema_validity_rate": 1.0,
+    "category_accuracy": 0.8,
+    "p50_latency_ms": 4734.6,
+    "p95_latency_ms": 5745.89
+  },
+  "finetuned_metrics": {
+    "total_samples": 10,
+    "exact_match_rate": 0.0,
+    "schema_validity_rate": 1.0,
+    "category_accuracy": 0.8,
+    "p50_latency_ms": 4767.35,
+    "p95_latency_ms": 5593.77
+  },
+  "delta": {
+    "schema_validity_gain": 0.0,
+    "category_accuracy_gain": 0.0,
+    "exact_match_gain": 0.0
+  }
+}

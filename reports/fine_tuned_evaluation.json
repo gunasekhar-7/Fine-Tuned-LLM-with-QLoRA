@@ -1,0 +1,61 @@
+{
+  "baseline_exact_match_pct": 0.0,
+  "baseline_schema_validity_pct": 0.0,
+  "baseline_invalid_rate_pct": 100.0,
+  "ft_exact_match_pct": 0.0,
+  "ft_schema_validity_pct": 0.0,
+  "ft_invalid_rate_pct": 100.0,
+  "num_examples": 10,
+  "per_example": [
+    {
+      "instruction": "Computer is running slowly",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "New computer won't turn on",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "Driver installation failed",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "No sound from speakers",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "USB-C port not charging",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "New computer won't turn on",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "Boot time has increased",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "No sound from speakers",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "Battery health has degraded",
+      "base_parsed": null,
+      "ft_parsed": null
+    },
+    {
+      "instruction": "Memory usage is critically high",
+      "base_parsed": null,
+      "ft_parsed": null
+    }
+  ]
+}

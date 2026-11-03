@@ -1,0 +1,29 @@
+{
+  "trainable_parameters": 8798208,
+  "total_parameters": 502830976,
+  "trainable_percentage": 1.7497,
+  "epochs": 3,
+  "total_update_steps": 36,
+  "best_val_loss": 0.2534,
+  "total_duration_seconds": 225.08,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3046,
+      "val_loss": 0.3454,
+      "duration_seconds": 96.81
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2624,
+      "val_loss": 0.2534,
+      "duration_seconds": 61.91
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2003,
+      "val_loss": 0.2576,
+      "duration_seconds": 61.68
+    }
+  ]
+}

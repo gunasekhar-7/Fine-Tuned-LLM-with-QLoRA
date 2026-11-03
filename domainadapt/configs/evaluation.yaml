@@ -1,0 +1,14 @@
+evaluation:
+  metric: "exact_match"
+  task: "domain_instruction_following"
+  batch_size: 4
+  max_new_tokens: 128
+  temperature: 0.0
+  success_criteria:
+    base_model_em: null  # populated after baseline run
+    fine_tuned_em_target: 0.70  # target exact match on test set
+    improvement_required: true
+  reports:
+    - name: "classification_report"
+      name: "per_category_analysis"
+    - name: "failure_analysis"

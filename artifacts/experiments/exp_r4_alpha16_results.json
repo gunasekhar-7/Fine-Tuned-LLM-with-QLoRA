@@ -1,0 +1,22 @@
+{
+  "name": "r4_alpha16",
+  "lora_r": 4,
+  "lora_alpha": 16,
+  "learning_rate": 0.0001,
+  "trainable_parameters": 2199552,
+  "total_parameters": 496232320,
+  "trainable_percentage": 0.4432504517239022,
+  "train_losses": [
+    7.026828357151577,
+    5.696010044642857,
+    5.168846062251499
+  ],
+  "val_losses": [
+    6.086928367614746,
+    5.363319714864095,
+    4.619006951649983
+  ],
+  "final_train_loss": 5.168846062251499,
+  "final_val_loss": 4.619006951649983,
+  "adapter_dir": "C:\\Projects\\Fine-Tuned LLM with QLoRA\\artifacts\\experiments\\r4_alpha16"
+}

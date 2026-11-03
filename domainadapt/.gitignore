@@ -1,0 +1,34 @@
+# Python environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+.installed-test.cfg
+.coverage
+htmlcov/
+.mypy_cache/
+.tox/
+.nox/
+__pytest__/
+.hypothesis/
+.memtest/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.tsvs
+*.ds_store
+*.env.local
+
+# Project-specific
+domainadapt/artifacts/
+domainadapt/reports/
+domainadapt/.env

@@ -1,0 +1,15 @@
+{
+  "base_exact_match_pct": 0.0,
+  "base_schema_validity_pct": 0.0,
+  "base_invalid_rate_pct": 100.0,
+  "ft_exact_match_pct": 0.0,
+  "ft_schema_validity_pct": 0.0,
+  "ft_invalid_rate_pct": 100.0,
+  "num_examples": 10,
+  "best_config": {
+    "rank": 16,
+    "alpha": 64,
+    "lr": 0.0003
+  },
+  "final_val_loss": 1.3524
+}

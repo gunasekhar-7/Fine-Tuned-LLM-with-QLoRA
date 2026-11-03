@@ -1,0 +1,8 @@
+model:
+  name: "Qwen/Qwen2.5-0.5B-Instruct"
+  family: "qwen2.5"
+  parameters: "0.5B"
+  context_length: 32768
+  quantization: "none"  # full-precision on CPU; QLoRA 4-bit reserved for GPU
+  torch_dtype: "float32"
+  device: "cpu"

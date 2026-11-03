@@ -1,0 +1,22 @@
+{
+  "name": "r8_alpha32",
+  "lora_r": 8,
+  "lora_alpha": 32,
+  "learning_rate": 0.0002,
+  "trainable_parameters": 4399104,
+  "total_parameters": 498431872,
+  "trainable_percentage": 0.8825888244963597,
+  "train_losses": [
+    7.026828357151577,
+    4.343296527862549,
+    3.0189148698534285
+  ],
+  "val_losses": [
+    4.655419985453288,
+    3.200903574625651,
+    2.3241310914357505
+  ],
+  "final_train_loss": 3.0189148698534285,
+  "final_val_loss": 2.3241310914357505,
+  "adapter_dir": "C:\\Projects\\Fine-Tuned LLM with QLoRA\\artifacts\\experiments\\r8_alpha32"
+}

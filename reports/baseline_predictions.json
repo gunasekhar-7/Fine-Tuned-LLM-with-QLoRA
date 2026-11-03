@@ -1,0 +1,182 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "evaluation": "baseline_base_model",
+  "num_examples": 10,
+  "exact_match": 0.0,
+  "schema_validity": 0.0,
+  "invalid_rate": 100.0,
+  "per_category": {
+    "performance": {
+      "exact_match_pct": 0.0,
+      "schema_validity_pct": 0.0,
+      "count": 3
+    },
+    "setup": {
+      "exact_match_pct": 0.0,
+      "schema_validity_pct": 0.0,
+      "count": 3
+    },
+    "audio_video": {
+      "exact_match_pct": 0.0,
+      "schema_validity_pct": 0.0,
+      "count": 2
+    },
+    "battery": {
+      "exact_match_pct": 0.0,
+      "schema_validity_pct": 0.0,
+      "count": 2
+    }
+  },
+  "results": [
+    {
+      "instruction": "Computer is running slowly",
+      "expected_output": {
+        "category": "performance",
+        "action": "run_disk_check",
+        "parameters": {},
+        "estimated_time_minutes": 54
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that your computer is running slowly. Here are some steps you can...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 16.760319709777832
+    },
+    {
+      "instruction": "New computer won't turn on",
+      "expected_output": {
+        "category": "setup",
+        "action": "system_restore",
+        "parameters": {
+          "step": 47
+        },
+        "estimated_time_minutes": 84
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that your new computer won't turn on. Can you provide some guidan...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 4.695048093795776
+    },
+    {
+      "instruction": "Driver installation failed",
+      "expected_output": {
+        "category": "setup",
+        "action": "reinstall_drivers",
+        "parameters": {
+          "device": "setup_device_131"
+        },
+        "estimated_time_minutes": 65
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that you're experiencing issues with installing a driver on your ...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 6.19434380531311
+    },
+    {
+      "instruction": "No sound from speakers",
+      "expected_output": {
+        "category": "audio_video",
+        "action": "i",
+        "parameters": {
+          "device": "audio_video_device_104",
+          "issue": "audio_video_issue_104"
+        },
+        "estimated_time_minutes": 21
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry, but I can't assist with that.<|im_end|>",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 2.2386419773101807
+    },
+    {
+      "instruction": "USB-C port not charging",
+      "expected_output": {
+        "category": "battery",
+        "action": "j",
+        "parameters": {
+          "charge_cycles": 92
+        },
+        "estimated_time_minutes": 15
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that you're experiencing issues with your USB-C port not charging...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 4.555975675582886
+    },
+    {
+      "instruction": "New computer won't turn on",
+      "expected_output": {
+        "category": "setup",
+        "action": "reinstall_drivers",
+        "parameters": {
+          "device": "setup_device_56"
+        },
+        "estimated_time_minutes": 100
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that your new computer won't turn on. Can you provide some guidan...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 4.529834270477295
+    },
+    {
+      "instruction": "Boot time has increased",
+      "expected_output": {
+        "category": "performance",
+        "action": "run_disk_check",
+        "parameters": {
+          "app_name": "performance_app_name_38"
+        },
+        "estimated_time_minutes": 84
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that your system is experiencing boot time issues. Boot time refe...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 16.841466188430786
+    },
+    {
+      "instruction": "No sound from speakers",
+      "expected_output": {
+        "category": "audio_video",
+        "action": "u",
+        "parameters": {
+          "device": "audio_video_device_0",
+          "issue": "audio_video_issue_0"
+        },
+        "estimated_time_minutes": 85
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry, but I can't assist with that.<|im_end|>",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 5.104570388793945
+    },
+    {
+      "instruction": "Battery health has degraded",
+      "expected_output": {
+        "category": "battery",
+        "action": "e",
+        "parameters": {
+          "power_source": "battery_power_source_109"
+        },
+        "estimated_time_minutes": 51
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that your battery is degrading. What steps can I take to improve ...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 16.477145671844482
+    },
+    {
+      "instruction": "Memory usage is critically high",
+      "expected_output": {
+        "category": "performance",
+        "action": "update_os",
+        "parameters": {
+          "memory_gb": 26
+        },
+        "estimated_time_minutes": 23
+      },
+      "generated_text": "<|im_start|>user\nI'm sorry to hear that you're experiencing memory usage issues with your applicatio...",
+      "parsed_output": null,
+      "exact_match": false,
+      "generation_time": 17.52005386352539
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+============================================================
+BASELINE EVALUATION REPORT: Base Model (Qwen2.5-0.5B-Instruct)
+============================================================
+Model: Qwen/Qwen2.5-0.5B-Instruct
+Examples evaluated: 10
+Exact Match: 0.0% (0/10)
+Schema Validity: 0.0% (0/10)
+Invalid Output Rate: 100.0% (10/10)
+
+Per-category analysis:
+  audio_video: EM=0.0% (0/2), Schema=0.0% (0/2)
+  battery: EM=0.0% (0/2), Schema=0.0% (0/2)
+  performance: EM=0.0% (0/3), Schema=0.0% (0/3)
+  setup: EM=0.0% (0/3), Schema=0.0% (0/3)
+
