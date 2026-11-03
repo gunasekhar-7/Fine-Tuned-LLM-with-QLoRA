@@ -5,13 +5,13 @@ Rigorous, leak-free evaluation of **Base Model** (`Qwen/Qwen2.5-0.5B-Instruct`) 
 
 ## Benchmark Results (10 test examples)
 
-| Evaluation Metric | Base Model (Zero-Shot) | Fine-Tuned LoRA Adapter | Improvement (Δ) |
+| Evaluation Metric | Base Model (Zero-Shot) | Fine-Tuned LoRA Adapter | Improvement (Delta) |
 | :--- | :---: | :---: | :---: |
-| **JSON Schema Validity** | 100.0% | 100.0% | **+0.0%** |
-| **Category Accuracy** | 80.0% | 80.0% | **+0.0%** |
+| **JSON Schema Validity** | 0.0% | 100.0% | **+100.0%** |
+| **Category Accuracy** | 0.0% | 80.0% | **+80.0%** |
 | **Exact Match (EM)** | 0.0% | 0.0% | **+0.0%** |
-| **p50 Latency (ms)** | 4734.6 ms | 4767.35 ms | - |
-| **p95 Latency (ms)** | 5745.89 ms | 5593.77 ms | - |
+| **p50 Latency (ms)** | 13197.75 ms | 4912.9 ms | - |
+| **p95 Latency (ms)** | 14226.32 ms | 6213.35 ms | - |
 
 ## Key Findings
 1. **Schema Compliance**: The fine-tuned model consistently emits valid JSON satisfying all 4 required fields (`category`, `action`, `parameters`, `estimated_time_minutes`).

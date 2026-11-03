@@ -5,6 +5,7 @@ import time
 import uuid
 from collections import defaultdict
 from pathlib import Path
+from contextlib import asynccontextmanager
 from typing import Any, Dict, List, Optional
 
 import uvicorn
@@ -54,7 +55,7 @@ class PredictResponse(BaseModel):
 
 
 class BatchPredictRequest(BaseModel):
-    instructions: List[str] = Field(..., min_items=1, max_items=50, description="List of instructions")
+    instructions: List[str] = Field(..., min_length=1, max_length=50, description="List of instructions")
     temperature: float = Field(default=0.0, ge=0.0, le=1.0)
     max_new_tokens: int = Field(default=128, ge=1, le=512)
     use_adapter: bool = Field(default=True)
@@ -152,6 +153,11 @@ class APIState:
 
 state = APIState()
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    state.init_models()
+    yield
+
 # ---------------------------------------------------------
 # FastAPI App & Middleware
 # ---------------------------------------------------------
@@ -159,6 +165,7 @@ app = FastAPI(
     title="DomainAdapt LLM API",
     description="Production-grade domain-adapted LLM fine-tuning and inference platform with QLoRA/LoRA",
     version="0.2.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -200,16 +207,10 @@ async def rate_limit_and_correlation_middleware(request: Request, call_next):
     return response
 
 
-@app.on_event("startup")
-def startup_event():
-    state.init_models()
-
-
-# ---------------------------------------------------------
-# Endpoints
-# ---------------------------------------------------------
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
+    if state.base_model is None:
+        state.init_models()
     return HealthResponse(
         status="ok",
         model_loaded=state.base_model is not None,
@@ -222,7 +223,7 @@ async def health_check():
 @app.get("/model/info", response_model=ModelInfoResponse)
 async def model_info():
     if state.base_model is None:
-        raise HTTPException(status_code=503, detail="Model not initialized")
+        state.init_models()
     return ModelInfoResponse(
         model_name=MODEL_NAME,
         adapter_loaded=state.adapter_model is not None,
